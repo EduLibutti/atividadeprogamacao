@@ -133,12 +133,14 @@ Dica: Utilize `console.log()` para exibir as informações!
 
 
 ```javascript
+//Definição da classe animal
  class Animal {
   constructor(nome,idade){
     this.nome = nome;
     this.idade = idade;
   }
 
+//Metódo descrever
   descrever(){
     console.log('Esse animal é o '+this.nome+', ele tem '+this.idade+' anos');
   }
@@ -147,6 +149,7 @@ Dica: Utilize `console.log()` para exibir as informações!
 var gato = new Animal('Gato', 14);
 var cachorro = new Animal('cachorro',2);
 
+//Chama o metódo descrever para o gato e o cachorro
 gato.descrever();
 cachorro.descrever();
 ```
@@ -178,23 +181,25 @@ Chamando os Métodos:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
- class Animal {
+ class Animal {   //Definição da classe animal
   constructor(nome,idade){
     this.nome = nome;
     this.idade = idade;
   }
 
+//Metódo para descrever o animal
   descrever(){
     console.log('Esse animal é o '+this.nome+', ele tem '+this.idade+' anos');
   }
 }
 
-var gato = new Animal('Gato', 14);
-var cachorro = new Animal('cachorro',2);
+var gato = new Animal('Gato', 12);
+var cachorro = new Animal('cachorro',4);
 
-gato.descrever();
 cachorro.descrever();
+gato.descrever();
 
+//Definição da classe gato
 class Gato extends Animal{
   constructor(cor,nome,idade){
     super(nome,idade)
@@ -204,10 +209,12 @@ class Gato extends Animal{
     console.log('Miau!',"disse o gato"+this.cor)
   }
 }
- var gato2 = new Gato ('marrom','gato2',10);
+//Cria uma instância da classe gato
+ var gat0 = new Gato ('branco','gato0',9);
 
- gato2.miar()
- gato2.descrever()
+// Chama o método miar e descrever para o gato0
+ gat0.miar()
+ gat0.descrever()
 
 ```
 
@@ -233,25 +240,27 @@ Chamando o Método para Ver o Total:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javacript
-class SomadorDeNotas{
-  constructor(total){
+class SomadorDeNotas{  //Definição das classes
+  constructor(total){  //Construtor de classe
     this.total = 0;
     this.total = total;
   }
 
-  adicionarNota(nota){
-    this.total += nota;
+  adicionarNota(nota){  //Adicionar uma nota ao total
+    this.total += nota;  //Adiciona o total com a nota fornecida
   }
   verTotal(){
-    console.log("seu total é " +this.total)
+    console.log("total é " +this.total)
   }
 }
-var somador = new SomadorDeNotas(0)
+var somar = new SomadorDeNotas(0)
 
-somador.adicionarNota(30)
-somador.adicionarNota(10)
-somador.adicionarNota(5)
-somador.verTotal()
+//Adiciona algumas notas à instância
+somar.adicionarNota(25)
+somar.adicionarNota(15)
+somar.adicionarNota(5)
+somar.adicionarNota(0)
+somar.verTotal()  //exibe o total no console
 ```
 ______
 
@@ -301,11 +310,11 @@ class Professor extends Funcionario{
   }
 }
 
-const ze = new Professor("Zé",22,0,"UX",20);  //Professor Zé
-const catarina = new Professor("Catarina",40,0,"Matemática",15);  //Professora Catarina
+const joao = new Professor("João",22,0,"UX",20);  //Professor João
+const maria = new Professor("Maria",40,0,"Matemática",15);  //Professora Maria
 
-ze.calcularSalario();
-catarina.calcularSalario();
+joao.calcularSalario();
+maria.calcularSalario();
 
-console.log("O Professor" + ze.nome + "recebe R$" + ze.salarioTotal + "e a Professora" + catarina.nome + "recebe R$" + catarina.salarioTotal);
+console.log("O Professor" + joao.nome + "recebe R$" + joao.salarioTotal + "e a Professora" + maria.nome + "recebe R$" + maria.salarioTotal);
 ```
